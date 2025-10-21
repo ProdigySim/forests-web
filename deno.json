@@ -21,14 +21,17 @@
   "imports": {
     "fresh": "jsr:@fresh/core@^2.0.0-alpha.60",
     "preact": "npm:preact@^10.27.1",
-    "@preact/signals": "npm:@preact/signals@^2.3.1"
+    "@preact/signals": "npm:@preact/signals@^2.3.1",
+    "scryfall-api": "npm:scryfall-api@^4.0.4"
   },
+  "unstable": ["kv"],
   "compilerOptions": {
     "lib": [
       "dom",
       "dom.asynciterable",
       "dom.iterable",
-      "deno.ns"
+      "deno.ns",
+      "deno.unstable"
     ],
     "jsx": "precompile",
     "jsxImportSource": "preact",

@@ -20,12 +20,14 @@
     "jsr:@std/semver@1": "1.0.5",
     "jsr:@std/uuid@^1.0.7": "1.0.9",
     "npm:@opentelemetry/api@^1.9.0": "1.9.0",
+    "npm:@preact/signals@^2.2.1": "2.3.1_preact@10.27.1",
     "npm:@preact/signals@^2.3.1": "2.3.1_preact@10.27.1",
     "npm:esbuild-wasm@0.25.7": "0.25.7",
     "npm:esbuild@0.25.7": "0.25.7",
     "npm:preact-render-to-string@^6.5.11": "6.5.13_preact@10.27.1",
     "npm:preact@^10.27.0": "10.27.1",
-    "npm:preact@^10.27.1": "10.27.1"
+    "npm:preact@^10.27.1": "10.27.1",
+    "npm:scryfall-api@^4.0.4": "4.0.4"
   },
   "jsr": {
     "@deno/esbuild-plugin@1.2.0": {
@@ -60,6 +62,7 @@
         "jsr:@std/semver",
         "jsr:@std/uuid",
         "npm:@opentelemetry/api",
+        "npm:@preact/signals@^2.2.1",
         "npm:esbuild",
         "npm:esbuild-wasm",
         "npm:preact-render-to-string",
@@ -304,13 +307,17 @@
     },
     "preact@10.27.1": {
       "integrity": "sha512-V79raXEWch/rbqoNc7nT9E4ep7lu+mI3+sBmfRD4i1M73R3WLYcCtdI0ibxGVf4eQL8ZIz2nFacqEC+rmnOORQ=="
+    },
+    "scryfall-api@4.0.4": {
+      "integrity": "sha512-scEBUs4h1tR6+8sDNV2qpT6SGcsuwsJRyG2j/JS6B0r7PooLvjHTM7kNFyGuUshJApFQ+DlgRNPzJIMk0392Tg=="
     }
   },
   "workspace": {
     "dependencies": [
       "jsr:@fresh/core@^2.0.0-alpha.60",
       "npm:@preact/signals@^2.3.1",
-      "npm:preact@^10.27.1"
+      "npm:preact@^10.27.1",
+      "npm:scryfall-api@^4.0.4"
     ]
   }
 }

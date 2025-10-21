@@ -1,29 +1,46 @@
 import { useSignal } from "@preact/signals";
 import { define } from "../utils.ts";
-import Counter from "../islands/Counter.tsx";
+import forests from "../data/forests.json" with { type: "json" };
+import type { Card } from "scryfall-api";
+import Print from "../islands/Print.tsx";
+import { getPsimCollection } from "../db/index.ts";
+import { Controls } from '../islands/Controls.tsx';
 
-export default define.page(function Home(ctx) {
-  const count = useSignal(3);
+function parseCard(c: Card): Card {
+  return {
+    ...c,
+    released_at: new Date(c.released_at),
+  }
+}
+const parsedForests = (forests as unknown as Card[]).map(parseCard);
 
-  ctx.state.title = count.value + " Fresh Counter" +
-    (Math.abs(count.value) === 1 ? "" : "s");
-
+const flatForests = parsedForests.flatMap(card => card.finishes.map(finish => ({ finish, card })));
+export const handler = define.handlers({
+  async GET(ctx) {
+    return {
+      data: {
+        collection: JSON.parse(await getPsimCollection()) as string[],
+      }
+    };
+  },
+});
+export default define.page<typeof handler>(function Home(ctx) {
+  const collection = useSignal(new Set<string>(ctx.data.collection));
+  
   return (
-    <div class="px-4 py-8 mx-auto fresh-gradient min-h-screen">
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-        <img
-          class="my-6"
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the Fresh logo: a sliced lemon dripping with juice"
-        />
-        <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-        <p class="my-4">
-          Try updating this message in the
-          <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-        </p>
-        <Counter count={count} />
+    <div>
+      <Controls collection={collection}/>
+      <div class="prints">
+        { 
+          flatForests.map(({card, finish}, i) => (
+          <Print 
+            index={i}
+            card={card}
+            finish={finish}
+            collection={collection}
+            />
+          ))
+        }
       </div>
     </div>
   );
