@@ -18,7 +18,7 @@ export const handler = define.handlers({
       );
     }
     if(!Array.isArray(body.collection) || !body.collection.every(id => {
-      return typeof id === 'string'
+      return typeof id === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-[a-z]+$/.test(id)
     })) {
       return new Response("Invalid collection format", { status: 400 })
     }
