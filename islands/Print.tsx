@@ -27,7 +27,7 @@ function shortenSetName(s: string) {
     .replace("Duel Decks Anthology:", "DDA:");
 }
 
-export default function Print(props: PrintProps) {
+export function Print(props: PrintProps) {
   const { index, card, finish } = props;
   const image = card.image_uris ? card.image_uris.normal : card.card_faces?.[0]?.image_uris?.normal;
   const finishText = finish === 'nonfoil' ? '' : `${finish.toUpperCase()} `;

@@ -2,10 +2,10 @@ import { useSignal } from "@preact/signals";
 import { define } from "../utils.ts";
 import forests from "../data/forests.json" with { type: "json" };
 import type { Card } from "scryfall-api";
-import Print from "../islands/Print.tsx";
 import { getPsimCollection } from "../db/index.ts";
 import { Controls } from '../islands/Controls.tsx';
 import { sortCards } from '../utils/cards.ts';
+import { PrintList } from '../islands/PrintList.tsx';
 
 function parseCard(c: Card): Card {
   return {
@@ -21,6 +21,7 @@ export const handler = define.handlers({
     return {
       data: {
         collection: JSON.parse(await getPsimCollection()) as string[],
+        prints: flatForests
       }
     };
   },
@@ -30,19 +31,8 @@ export default define.page<typeof handler>(function Home(ctx) {
   
   return (
     <div>
-      <Controls totalPrints={flatForests.length} collection={collection}/>
-      <div class="prints">
-        { 
-          flatForests.map(({card, finish}, i) => (
-          <Print 
-            index={i}
-            card={card}
-            finish={finish}
-            collection={collection}
-            />
-          ))
-        }
-      </div>
+      <Controls totalPrints={ctx.data.prints.length} collection={collection}/>
+      <PrintList collection={collection} prints={ctx.data.prints}/>
     </div>
   );
 });
