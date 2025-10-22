@@ -2,11 +2,14 @@ import { Signal, useSignal } from "@preact/signals";
 
 export interface ControlsProps {
   collection: Signal<Set<string>>;
+  totalPrints: number;
 }
 
 export function Controls(props: ControlsProps) {
   const passphrase = useSignal("");
-  const statusText = useSignal("");
+  const collected = props.collection.value.size;
+  const remaining = props.totalPrints - collected;
+  const statusText = `Collected: ${collected} Remaining: ${remaining} Total: ${props.totalPrints}`;
 
   const saveCollection = async () => {
     console.log('saving');

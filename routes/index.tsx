@@ -30,7 +30,7 @@ export default define.page<typeof handler>(function Home(ctx) {
   
   return (
     <div>
-      <Controls collection={collection}/>
+      <Controls totalPrints={flatForests.length} collection={collection}/>
       <div class="prints">
         { 
           flatForests.map(({card, finish}, i) => (
