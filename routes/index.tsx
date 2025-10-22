@@ -5,6 +5,7 @@ import type { Card } from "scryfall-api";
 import Print from "../islands/Print.tsx";
 import { getPsimCollection } from "../db/index.ts";
 import { Controls } from '../islands/Controls.tsx';
+import { sortCards } from '../utils/cards.ts';
 
 function parseCard(c: Card): Card {
   return {
@@ -12,7 +13,7 @@ function parseCard(c: Card): Card {
     released_at: new Date(c.released_at),
   }
 }
-const parsedForests = (forests as unknown as Card[]).map(parseCard);
+const parsedForests = (forests as unknown as Card[]).map(parseCard).sort(sortCards);
 
 const flatForests = parsedForests.flatMap(card => card.finishes.map(finish => ({ finish, card })));
 export const handler = define.handlers({
