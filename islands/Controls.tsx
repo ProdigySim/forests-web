@@ -9,7 +9,9 @@ export function Controls(props: ControlsProps) {
   const passphrase = useSignal("");
   const collected = props.collection.value.size;
   const remaining = props.totalPrints - collected;
-  const statusText = `Collected: ${collected} Remaining: ${remaining} Total: ${props.totalPrints}`;
+  const total = props.totalPrints;
+  const completionPct = (Math.round(((collected/total)*1000))/10).toString(10);
+  const statusText = `${completionPct}% Complete!\nCollected: ${collected} Remaining: ${remaining} Total: ${props.totalPrints}`;
 
   const saveCollection = async () => {
     console.log('saving');
