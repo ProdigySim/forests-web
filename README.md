@@ -1,24 +1,13 @@
-# Fresh project
+# Forests-web
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+This webpage tracks [PSim's Forest Collection Binder](https://youtu.be/Hj1ov-S0CNA).
 
-### Usage
-
-Make sure to install Deno:
-https://docs.deno.com/runtime/getting_started/installation
-
-Then start the project in development mode:
-
-```
-deno task dev
-```
-
-This will watch the project directory and restart as necessary.
+View the live page tracking the collection: https://forests.prodigysim.com/
 
 
-### Clone and deploy
+## Info
 
-Deploy your own version of this example with a couple of clicks
+This is a Deno app built for Deno Deploy using the Fresh framework. I used Deno deploy because I knew they had a good free tier for basic web + database setups. The backend uses Deno OpenKV to store the current collection.
 
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/denoland/examples&path=with-fresh)
+That's it for now but feel free to reach out with questions :)
+
