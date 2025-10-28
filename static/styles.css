@@ -30,6 +30,12 @@
   text-align:center;
 }
 
+.controls .forestlogo {
+  height: 36px;
+  margin: 2px 6px;
+  vertical-align: bottom;
+}
+
 .status {
   white-space: pre-wrap;
 }
