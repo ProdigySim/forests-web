@@ -6,7 +6,7 @@ import { getPsimCollection } from "../db/index.ts";
 import { Controls } from '../islands/Controls.tsx';
 import { sortCards } from '../utils/cards.ts';
 import { PrintList } from '../islands/PrintList.tsx';
-import { SiteControls } from '../islands/SiteControls.tsx';
+import { SiteControls } from "../islands/SiteControls.tsx";
 
 function parseCard(c: Card): Card {
   return {

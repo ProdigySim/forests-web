@@ -1,5 +1,20 @@
 import { define } from "../utils.ts";
 
+function setupBaseClass() {
+  function getInitialTheme() {
+    const storedTheme = localStorage.getItem("theme");
+    console.log("loading theme: ", storedTheme);
+    if(storedTheme === 'dark' || storedTheme === 'light') {
+      return storedTheme;
+    }
+    if(globalThis.window?.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return 'dark'
+    }
+    return 'light';
+  }
+  document.body.classList.toggle("darkmode", getInitialTheme() === 'dark');
+}
+const baseClassScript = (setupBaseClass.toString() + ";setupBaseClass();").replace(";\n", "\n");
 export default define.page(function App({ Component, state }) {
   return (
     <html>
@@ -11,6 +26,10 @@ export default define.page(function App({ Component, state }) {
         <link rel="icon" type="image/png" href="favicon.png" />
       </head>
       <body>
+        <script 
+          dangerouslySetInnerHTML={{
+            __html: baseClassScript,
+          }} />
         <Component />
       </body>
     </html>

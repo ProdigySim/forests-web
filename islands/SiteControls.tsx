@@ -1,25 +1,16 @@
-import { Signal, useSignal, useSignalEffect } from "@preact/signals";
+import { useSignal } from "@preact/signals";
 
 export function SiteControls() {
-  const mode = useSignal<"dark" | "light">("light");
+  const theme = useSignal<"dark" | "light">(globalThis.document?.body.classList.contains("darkmode") ? "dark" : "light");
   const toggleMode = () => {
-    if(mode.value === "dark") {
-      mode.value = "light";
-    } else {
-      mode.value = "dark";
-    }
+    theme.value = theme.value === "dark" ? "light" : "dark";
+    console.log("togglemode");
+    globalThis.document.body.classList.toggle("darkmode", theme.value === "dark");
+    globalThis.localStorage.setItem("theme", theme.value);
   }
-  mode.subscribe((modeVal) => {
-    globalThis.document?.body.classList.toggle("darkmode", modeVal === "dark");
-    globalThis.localStorage?.setItem("theme", modeVal);
-  });
-  useSignalEffect(() => {
-    mode.value = localStorage.getItem("theme") as "dark" | "light" ?? 'light';
-  });
-
   return (
     <div class="sitecontrols">
-        <button onClick={toggleMode} type="button" id="darkmode">{ mode.value === "dark" ? 'Light Mode' : 'Dark Mode'}</button>
+        <button onClick={toggleMode} type="button" id="darkmode">{ theme.value === "dark" ? 'Light Mode' : 'Dark Mode'}</button>
     </div>
   );
 }
