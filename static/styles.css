@@ -58,7 +58,19 @@ button.activated {
   background-color: rgba(100, 20, 180, 0.7);
 }
 
+
+.sitecontrols {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: darkblue;
+  border: 1px solid white;
+}
 @media print {
+
+  .sitecontrols {
+    display: none;
+  }
 
   .print {
     padding: 0 8px;
@@ -73,5 +85,29 @@ button.activated {
   }
   .controls {
     display: none;
+  }
+}
+@media screen {
+  .darkmode {
+    background-color: rgb(25, 25, 25);
+    color: white;
+  }
+  .darkmode a:visited {
+      color: lightpink;
+  }
+
+  .darkmode .controls {
+    border: 1px dotted white;
+  }
+  .darkmode button {
+    border: 1px solid white;
+  }
+
+  .darkmode .print {
+    border: 1px solid white;
+  }
+  .darkmode input {
+    background-color: rgb(50,50,50);
+    color: white;
   }
 }
