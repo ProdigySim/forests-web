@@ -21,19 +21,19 @@ export const handler = define.handlers({
   async GET(ctx) {
     return {
       data: {
-        collection: JSON.parse(await getPsimCollection()) as string[],
+        collection: await getPsimCollection(),
         prints: flatForests
       }
     };
   },
 });
 export default define.page<typeof handler>(function Home(ctx) {
-  const collection = useSignal(new Set<string>(ctx.data.collection));
+  const collection = useSignal(new Set<string>(ctx.data.collection.collection));
   
   return (
     <div>
       <SiteControls />
-      <Controls totalPrints={ctx.data.prints.length} collection={collection}/>
+      <Controls totalPrints={ctx.data.prints.length} updateFromTimestamp={ctx.data.collection.timestamp} collection={collection}/>
       <PrintList collection={collection} prints={ctx.data.prints}/>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Signal, useSignal } from "@preact/signals";
 
 export interface ControlsProps {
+  updateFromTimestamp: string;
   collection: Signal<Set<string>>;
   totalPrints: number;
 }
@@ -19,6 +20,7 @@ export function Controls(props: ControlsProps) {
       method: 'PUT',
       body: JSON.stringify({
         passphrase,
+        updateFromTimestamp: props.updateFromTimestamp,
         collection: Array.from(props.collection.value),
       }),
     });
