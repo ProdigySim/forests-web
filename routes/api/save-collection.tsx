@@ -1,4 +1,4 @@
-import { CardCollectionDto, getPsimCollection, setPsimCollection } from "../../db/index.ts";
+import { getPsimCollection, setPsimCollection } from "../../db/index.ts";
 import { define } from "../../utils.ts";
 
 const passphrase = Deno.env.get("UPDATE_PASSPHRASE") ?? crypto.randomUUID();
@@ -29,7 +29,7 @@ export const handler = define.handlers({
     }
     // validate against last saved timestamp
     if(body.updateFromTimestamp !== (await getPsimCollection()).timestamp) {
-      return new Response("Collection timestamp out of date. Please refresh and try again.");
+      return new Response("Collection timestamp out of date. Please refresh and try again.", { status: 400 });
     }
     await setPsimCollection({
       version:'v1',

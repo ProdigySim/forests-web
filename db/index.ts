@@ -23,7 +23,7 @@ export async function getPsimCollection(): Promise<CardCollectionDto> {
   if(Array.isArray(decoded)) {
     // Old style collection--translate to new
     return {
-      timestamp: (new Date()).toISOString(),
+      timestamp: (new Date(0)).toISOString(),
       collection: decoded,
       version: 'v1',
     }
