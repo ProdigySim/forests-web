@@ -6,10 +6,11 @@
     background-color: rgba(30,160,10, 0.5);
   }
 }
+
 .prints {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  width: 1024px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1024px;
   margin: 0px auto;
 }
 .print {
@@ -24,7 +25,7 @@
 
 .controls {
   border: 1px dotted black;
-  width: 600px;
+  max-width: 600px;
   margin: 10px auto;
   padding: 12px;
   text-align:center;
@@ -65,6 +66,12 @@ button.activated {
   right: 0;
   background-color: darkblue;
   border: 1px solid white;
+}
+
+@media screen and (max-width: 600px) {
+  .sitecontrols {
+    display: none;
+  }
 }
 @media print {
 
