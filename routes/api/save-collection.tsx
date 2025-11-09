@@ -28,7 +28,9 @@ export const handler = define.handlers({
       return new Response("Invalid collection format", { status: 400 })
     }
     // validate against last saved timestamp
-    if(body.updateFromTimestamp !== (await getPsimCollection()).timestamp) {
+    const savedTimestamp = (await getPsimCollection()).timestamp;
+    if(body.updateFromTimestamp !== savedTimestamp) {
+      console.log("Timestamp mismatch on save:", body.updateFromTimestamp, savedTimestamp)
       return new Response("Collection timestamp out of date. Please refresh and try again.", { status: 400 });
     }
     await setPsimCollection({
