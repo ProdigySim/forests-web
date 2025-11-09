@@ -1,3 +1,4 @@
+import { Partial } from "fresh/runtime";
 import { define } from "../utils.ts";
 
 function setupBaseClass() {
@@ -30,7 +31,9 @@ export default define.page(function App({ Component, state }) {
           dangerouslySetInnerHTML={{
             __html: baseClassScript,
           }} />
-        <Component />
+        <Partial name="body">
+          <Component />
+        </Partial>
       </body>
     </html>
   );

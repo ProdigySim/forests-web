@@ -1,13 +1,18 @@
 import { Signal, useSignal } from "@preact/signals";
 
+export interface PrintFilterOptions {
+  finishMode: "both" | "nonfoil" | "foil+";
+}
 export interface ControlsProps {
   collection: Signal<Set<string>>;
+  displayedCollection: Signal<string[]>;
   totalPrints: number;
+  printFilterOptions: Signal<PrintFilterOptions>;
 }
 
 export function Controls(props: ControlsProps) {
   const passphrase = useSignal("");
-  const collected = props.collection.value.size;
+  const collected = props.displayedCollection.value.length;
   const remaining = props.totalPrints - collected;
   const total = props.totalPrints;
   const completionPct = (Math.round(((collected/total)*1000))/10).toString(10);
@@ -41,6 +46,15 @@ export function Controls(props: ControlsProps) {
       console.error("Failed to read clipboard collection", e);
     }  
   };
+
+  const changeFinishFilter = (newMode: string) => {
+    console.log("set mode to", newMode);
+    props.printFilterOptions.value = {
+      ...props.printFilterOptions.value,
+      finishMode: newMode as 'both' | 'nonfoil' | 'foil+',
+    }
+  }
+  const finishMode = props.printFilterOptions.value.finishMode;
   return (
     <div class="controls">
       <h1><img class="forestlogo" src="favicon.png" />PSim's Forest Collection</h1>
@@ -55,6 +69,16 @@ export function Controls(props: ControlsProps) {
         />
         <button onClick={saveCollection} type="button" id="save">Save</button>
         <button onClick={clipboardLoad} type="button" id="loadclip">📋 Load</button>
+      </div>
+      <div class="filters">
+        <div class="finish-filter">Finishes: 
+          <input onChange={(e) => changeFinishFilter(e.currentTarget.value)} checked={finishMode === 'both'} type="radio" id="finish-filter-both" value="both"></input>
+          <label for="finish-filter-both">All</label>
+          <input onChange={(e) => changeFinishFilter(e.currentTarget.value)}  checked={finishMode === 'nonfoil'}type="radio" id="finish-filter-nonfoil" value="nonfoil"></input>
+          <label for="finish-filter-nonfoil">Non-Foil</label>
+          <input onChange={(e) => changeFinishFilter(e.currentTarget.value)}  checked={finishMode === 'foil+'}type="radio" id="finish-filter-foil" value="foil+"></input>
+          <label for="finish-filter-foil">Foil+</label>
+        </div>
       </div>
       <div class="status">{statusText}</div>
     </div>

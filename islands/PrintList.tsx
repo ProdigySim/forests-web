@@ -1,4 +1,4 @@
-import { Signal } from "@preact/signals";
+import { ReadonlySignal, Signal } from "@preact/signals";
 import type { Card } from "scryfall-api";
 import {Print} from "./Print.tsx";
 
