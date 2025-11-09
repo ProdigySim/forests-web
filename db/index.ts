@@ -22,8 +22,10 @@ export async function getPsimCollection(): Promise<CardCollectionDto> {
   const decoded = JSON.parse(json); 
   if(Array.isArray(decoded)) {
     // Old style collection--translate to new
+    const timestamp = (new Date(0)).toISOString();
+    console.log("Decoded old collection json--translating to new with timestamp", timestamp)
     return {
-      timestamp: (new Date(0)).toISOString(),
+      timestamp,
       collection: decoded,
       version: 'v1',
     }
