@@ -9,7 +9,7 @@
 
 .prints {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10px, 256px) minmax(10px, 256px));
   max-width: 1024px;
   margin: 0px auto;
 }
