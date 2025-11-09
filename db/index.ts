@@ -1,11 +1,38 @@
+export interface CardCollectionDto {
+  /**
+   * ISO Timestamp of collection date
+   */
+  timestamp: string;
 
-export async function getPsimCollection(): Promise<string> {
+  /**
+   * Card ids
+   */
+  collection: string[];
+
+  /**
+   * Collection version string
+   */
+  version: 'v1'
+}
+export async function getPsimCollection(): Promise<CardCollectionDto> {
   const kv = await Deno.openKv();
   const list = await kv.get<string>(['psim']);
-  return list.value ?? '[]';
+  
+  const json = list.value ?? '[]';
+  const decoded = JSON.parse(json); 
+  if(Array.isArray(decoded)) {
+    // Old style collection--translate to new
+    return {
+      timestamp: (new Date()).toISOString(),
+      collection: decoded,
+      version: 'v1',
+    }
+  } else {
+    return decoded;
+  }
 }
 
-export async function setPsimCollection(collection: string) {
+export async function setPsimCollection(collection: CardCollectionDto) {
   const kv = await Deno.openKv();
-  await kv.set(['psim'], collection);
+  await kv.set(['psim'], JSON.stringify(collection));
 }
