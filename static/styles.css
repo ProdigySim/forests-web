@@ -12,6 +12,7 @@
   grid-template-columns: repeat(auto-fill, minmax(10px, 256px) minmax(10px, 256px));
   max-width: 1024px;
   margin: 0px auto;
+  justify-content:center;
 }
 .print {
   text-align:center;
