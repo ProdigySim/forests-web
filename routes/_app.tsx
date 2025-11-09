@@ -21,9 +21,11 @@ export default define.page(function App({ Component, state }) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="PSim's Forest Collection Project Homepage. Collecting all forests in Magic: The Gathering (MTG)." />
         <title>Forests</title>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="canonical" href="https://forests.quest/" />
       </head>
       <body>
         <script 

@@ -44,6 +44,7 @@ export function Controls(props: ControlsProps) {
   return (
     <div class="controls">
       <h1><img class="forestlogo" src="favicon.png" />PSim's Forest Collection</h1>
+      <p class="subtitle"><a href="https://forests.quest/">forests.quest</a></p>
       <p>This page tracks the progress of the Every Forest in MTG Project. <br /><a href="https://www.youtube.com/watch?v=Hj1ov-S0CNA" target="_blank">Check it out on Youtube.</a></p>
       <div class="clipboardbtns">
         <input 
