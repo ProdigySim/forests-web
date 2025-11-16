@@ -4,34 +4,39 @@ function setupBaseClass() {
   function getInitialTheme() {
     const storedTheme = localStorage.getItem("theme");
     console.log("loading theme: ", storedTheme);
-    if(storedTheme === 'dark' || storedTheme === 'light') {
+    if (storedTheme === "dark" || storedTheme === "light") {
       return storedTheme;
     }
-    if(globalThis.window?.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return 'dark'
+    if (globalThis.window?.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
     }
-    return 'light';
+    return "light";
   }
-  document.body.classList.toggle("darkmode", getInitialTheme() === 'dark');
+  document.body.classList.toggle("darkmode", getInitialTheme() === "dark");
 }
-const baseClassScript = (setupBaseClass.toString() + ";setupBaseClass();").replace(";\n", "\n");
+const baseClassScript = (setupBaseClass.toString() + ";setupBaseClass();")
+  .replace(";\n", "\n");
 export default define.page(function App({ Component, state }) {
   return (
     <html>
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="PSim's Forest Collection Project Homepage. Collecting all forests in Magic: The Gathering (MTG)." />
+        <meta
+          name="description"
+          content="PSim's Forest Collection Project Homepage. Collecting all forests in Magic: The Gathering (MTG)."
+        />
         <title>Forests</title>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="icon" type="image/png" href="favicon.png" />
         <link rel="canonical" href="https://forests.quest/" />
       </head>
       <body>
-        <script 
+        <script
           dangerouslySetInnerHTML={{
             __html: baseClassScript,
-          }} />
+          }}
+        />
         <Component />
       </body>
     </html>

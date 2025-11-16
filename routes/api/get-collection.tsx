@@ -7,9 +7,9 @@ export const handler = define.handlers({
       JSON.stringify(await getPsimCollection()),
       {
         headers: {
-          'Content-Type': 'application/json'
-        }
-      }
+          "Content-Type": "application/json",
+        },
+      },
     );
   },
 });

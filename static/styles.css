@@ -3,19 +3,20 @@
     border: 1px solid black;
   }
   .print.collected {
-    background-color: rgba(30,160,10, 0.5);
+    background-color: rgba(30, 160, 10, 0.5);
   }
 }
 
 .prints {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10px, 256px) minmax(10px, 256px));
+  grid-template-columns:
+    repeat(auto-fill, minmax(10px, 256px) minmax(10px, 256px));
   max-width: 1024px;
   margin: 0px auto;
-  justify-content:center;
+  justify-content: center;
 }
 .print {
-  text-align:center;
+  text-align: center;
   margin: 8px auto;
 }
 
@@ -29,7 +30,7 @@
   max-width: 600px;
   margin: 10px auto;
   padding: 12px;
-  text-align:center;
+  text-align: center;
 }
 
 .controls .forestlogo {
@@ -66,7 +67,6 @@ button.activated {
   background-color: rgba(100, 20, 180, 0.7);
 }
 
-
 .sitecontrols {
   position: fixed;
   top: 0;
@@ -81,14 +81,13 @@ button.activated {
   }
 }
 @media print {
-
   .sitecontrols {
     display: none;
   }
 
   .print {
     padding: 0 8px;
-    break-inside:avoid;
+    break-inside: avoid;
   }
   .prints {
     grid-template-columns: 33% 33% 33%;
@@ -110,7 +109,7 @@ button.activated {
     color: darkorange;
   }
   .darkmode a:visited {
-      color: peru;
+    color: peru;
   }
 
   .darkmode .controls {
@@ -124,7 +123,7 @@ button.activated {
     border: 1px solid white;
   }
   .darkmode input {
-    background-color: rgb(50,50,50);
+    background-color: rgb(50, 50, 50);
     color: white;
   }
 }
