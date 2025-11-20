@@ -67,8 +67,22 @@ button.activated {
   background-color: rgba(100, 20, 180, 0.7);
 }
 
-.sitecontrols {
+.scrollToTop {
   position: fixed;
+  bottom: 5px;
+  right: 5px;
+  display: none;
+}
+
+.scrollToTop.visible {
+  display: block;
+}
+
+.scrollToTop button {
+  border-radius: 50px;
+}
+.sitecontrols {
+  position: absolute;
   top: 0;
   right: 0;
   background-color: darkblue;

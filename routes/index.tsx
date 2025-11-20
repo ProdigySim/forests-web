@@ -7,6 +7,7 @@ import { Controls } from "../islands/Controls.tsx";
 import { sortCards } from "../utils/cards.ts";
 import { PrintList } from "../islands/PrintList.tsx";
 import { SiteControls } from "../islands/SiteControls.tsx";
+import { ScrollToTop } from "../islands/ScrollToTop.tsx";
 
 function parseCard(c: Card): Card {
   return {
@@ -37,6 +38,7 @@ export default define.page<typeof handler>(function Home(ctx) {
   return (
     <div>
       <SiteControls />
+      <ScrollToTop />
       <Controls
         totalPrints={ctx.data.prints.length}
         updateFromTimestamp={ctx.data.collection.timestamp}
