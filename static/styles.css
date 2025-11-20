@@ -46,12 +46,28 @@
 }
 
 .status {
+  margin-top: 6px;
   white-space: pre-wrap;
 }
 
 .clipboardbtns {
   display: flex;
   justify-content: center;
+}
+
+.clipboardbtns > span {
+  display: flex;
+}
+
+.clipboardbtns.visible > span {
+  display: none;
+}
+
+.clipboardbtns > :not(span) {
+  display: none;
+}
+.clipboardbtns.visible > :not(span) {
+  display: flex;
 }
 
 button {

@@ -1,4 +1,5 @@
 import { Signal, useSignal } from "@preact/signals";
+import { useRef } from 'preact/hooks';
 
 export interface ControlsProps {
   updateFromTimestamp: string;
@@ -7,18 +8,20 @@ export interface ControlsProps {
 }
 
 export function Controls(props: ControlsProps) {
-  const passphrase = useSignal("");
+  const showSaveLoad = useSignal(false);
   const collected = props.collection.value.size;
   const remaining = props.totalPrints - collected;
   const total = props.totalPrints;
   const completionPct = (Math.round((collected / total) * 1000) / 10).toString(
     10,
   );
+  const passwordInput = useRef<HTMLInputElement>(null);
   const statusText =
     `${completionPct}% Complete!\nCollected: ${collected} Remaining: ${remaining} Total: ${props.totalPrints}`;
 
   const saveCollection = async () => {
     console.log("saving");
+    const passphrase = passwordInput.current?.value;
     const res = await fetch("/api/save-collection", {
       method: "PUT",
       body: JSON.stringify({
@@ -65,9 +68,10 @@ export function Controls(props: ControlsProps) {
           Check it out on Youtube.
         </a>
       </p>
-      <div class="clipboardbtns">
+      <div class={showSaveLoad.value ? 'clipboardbtns visible' : 'clipboardbtns'}>
+        <span><a href="javascript:void(0)" onClick={() => showSaveLoad.value = true }>Save/Load</a></span>
         <input
-          onInput={(e) => passphrase.value = e.currentTarget.value}
+          ref={passwordInput}
           type="password"
           name="passphrase"
           id="passphrase"
