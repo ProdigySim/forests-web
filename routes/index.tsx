@@ -34,17 +34,19 @@ export const handler = define.handlers({
 });
 export default define.page<typeof handler>(function Home(ctx) {
   const collection = useSignal(new Set<string>(ctx.data.collection.collection));
+  const editMode = useSignal(false);
 
   return (
     <div>
       <SiteControls />
       <ScrollToTop />
       <Controls
+        editMode={editMode}
         totalPrints={ctx.data.prints.length}
         updateFromTimestamp={ctx.data.collection.timestamp}
         collection={collection}
       />
-      <PrintList collection={collection} prints={ctx.data.prints} />
+      <PrintList editMode={editMode} collection={collection} prints={ctx.data.prints} />
     </div>
   );
 });

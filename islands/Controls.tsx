@@ -4,11 +4,11 @@ import { useRef } from 'preact/hooks';
 export interface ControlsProps {
   updateFromTimestamp: string;
   collection: Signal<Set<string>>;
+  editMode: Signal<boolean>;
   totalPrints: number;
 }
 
 export function Controls(props: ControlsProps) {
-  const showSaveLoad = useSignal(false);
   const collected = props.collection.value.size;
   const remaining = props.totalPrints - collected;
   const total = props.totalPrints;
@@ -68,8 +68,8 @@ export function Controls(props: ControlsProps) {
           Check it out on Youtube.
         </a>
       </p>
-      <div class={showSaveLoad.value ? 'clipboardbtns visible' : 'clipboardbtns'}>
-        <span><a href="javascript:void(0)" onClick={() => showSaveLoad.value = true }>Save/Load</a></span>
+      <div class={props.editMode.value ? 'clipboardbtns visible' : 'clipboardbtns'}>
+        <span><a href="javascript:void(0)" onClick={() => props.editMode.value = true }>Edit Mode</a></span>
         <input
           ref={passwordInput}
           type="password"

@@ -1,11 +1,12 @@
 import type { Card } from "scryfall-api";
-import { Signal } from "@preact/signals";
+import { ReadonlySignal, Signal } from "@preact/signals";
 
 interface PrintProps {
   index: number;
   card: Card;
   finish: string;
   collection: Signal<Set<string>>;
+  isEditable: ReadonlySignal<boolean>;
 }
 
 function dateFmt(released_at: Date) {
@@ -55,6 +56,9 @@ export function Print(props: PrintProps) {
 
   const collected = props.collection.value.has(`${card.id}-${finish}`);
   const toggle = () => {
+    if(!props.isEditable.value) {
+      return;
+    }
     const s = new Set(props.collection.value);
     if (collected) {
       s.delete(`${card.id}-${finish}`);
