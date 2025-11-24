@@ -1,13 +1,9 @@
-import { useSignal } from "@preact/signals";
 import { define } from "../utils.ts";
 import forests from "../data/forests.json" with { type: "json" };
 import type { Card } from "scryfall-api";
 import { getPsimCollection } from "../db/index.ts";
-import { Controls } from "../islands/Controls.tsx";
 import { sortCards } from "../utils/cards.ts";
-import { PrintList } from "../islands/PrintList.tsx";
-import { SiteControls } from "../islands/SiteControls.tsx";
-import { ScrollToTop } from "../islands/ScrollToTop.tsx";
+import { Page } from "../islands/Page.tsx";
 
 function parseCard(c: Card): Card {
   return {
@@ -33,20 +29,5 @@ export const handler = define.handlers({
   },
 });
 export default define.page<typeof handler>(function Home(ctx) {
-  const collection = useSignal(new Set<string>(ctx.data.collection.collection));
-  const editMode = useSignal(false);
-
-  return (
-    <div>
-      <SiteControls />
-      <ScrollToTop />
-      <Controls
-        editMode={editMode}
-        totalPrints={ctx.data.prints.length}
-        updateFromTimestamp={ctx.data.collection.timestamp}
-        collection={collection}
-      />
-      <PrintList editMode={editMode} collection={collection} prints={ctx.data.prints} />
-    </div>
-  );
+  return (<Page collection={ctx.data.collection} prints={ctx.data.prints} />);
 });

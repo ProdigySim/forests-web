@@ -1,17 +1,19 @@
 import { Signal, useSignal } from "@preact/signals";
 import { useRef } from 'preact/hooks';
+import { Filters, FilterSettings } from "../components/Filters.tsx";
+import { useCollection } from "../contexts/Collection.ts";
 
 export interface ControlsProps {
   updateFromTimestamp: string;
-  collection: Signal<Set<string>>;
   editMode: Signal<boolean>;
-  totalPrints: number;
 }
 
 export function Controls(props: ControlsProps) {
-  const collected = props.collection.value.size;
-  const remaining = props.totalPrints - collected;
-  const total = props.totalPrints;
+  const { collection, filters,prints  } = useCollection();
+  const totalPrints = prints.length;
+  const collected = collection.value.size;
+  const remaining = totalPrints - collected;
+  const total = totalPrints;
   const completionPct = (Math.round((collected / total) * 1000) / 10).toString(
     10,
   );
@@ -83,6 +85,8 @@ export function Controls(props: ControlsProps) {
         </button>
       </div>
       <div class="status">{statusText}</div>
+      <hr />
+      <Filters settings={filters}/>
     </div>
   );
 }
