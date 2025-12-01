@@ -1,5 +1,9 @@
 import type { Card } from "scryfall-api";
-import { ReadonlySignal, Signal } from "@preact/signals";
+import { ReadonlySignal, Signal, useComputed } from "@preact/signals";
+import { useMemo } from "preact/hooks";
+
+
+type CardPlus = Card & { sld_drop_name?: string };
 
 interface PrintProps {
   index: number;
@@ -28,7 +32,9 @@ function shortenSetName(s: string) {
     .replace("Commander Legends:", "CL:")
     .replace("Global Series", "G.S.")
     .replace("Duel Decks:", "DD:")
-    .replace("Duel Decks Anthology:", "DDA:");
+    .replace("Duel Decks Anthology:", "DDA:")
+    .replace("SpongeBob SquarePants: Lands Under the Sea", "SpongeBob SquarePants")
+    .replace("KEXP: Where the Music Matters", "KEXP");
 }
 
 function foilText(card: Card, finish: string) {
@@ -48,7 +54,8 @@ function foilText(card: Card, finish: string) {
 }
 
 export function Print(props: PrintProps) {
-  const { index, card, finish } = props;
+  const { index, card: origCard, finish } = props;
+  const card = origCard as CardPlus;
   const image = card.image_uris
     ? card.image_uris.normal
     : card.card_faces?.[0]?.image_uris?.normal;
@@ -68,6 +75,10 @@ export function Print(props: PrintProps) {
     props.collection.value = s;
   };
 
+  const setName = card.sld_drop_name ? `SLD: ${card.sld_drop_name}` : card.set_name;
+  const displaySetName = useMemo(() => {
+    return shortenSetName(setName)
+  }, [setName])
   const frontClasses = `front finish-${props.finish}`;
   return (
     <div
@@ -79,7 +90,7 @@ export function Print(props: PrintProps) {
     >
       <div class="num">{index.toString(10).padStart(4, "0")}</div>
       <div class={frontClasses} style={{backgroundImage: `url(${image})`}} />
-      <div class="name">{shortenSetName(card.set_name)}</div>
+      <div class="name">{displaySetName}</div>
       <div class="set">{finishText}{toCardId(card)}</div>
       <div class="date">{dateFmt(card.released_at)}</div>
     </div>
