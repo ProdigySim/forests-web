@@ -67,6 +67,8 @@ export function Print(props: PrintProps) {
     }
     props.collection.value = s;
   };
+
+  const frontClasses = `front finish-${props.finish}`;
   return (
     <div
       onClick={toggle}
@@ -76,7 +78,7 @@ export function Print(props: PrintProps) {
       data-finish={finish}
     >
       <div class="num">{index.toString(10).padStart(4, "0")}</div>
-      <img class="front" src={image} />
+      <div class={frontClasses} style={{backgroundImage: `url(${image})`}} />
       <div class="name">{shortenSetName(card.set_name)}</div>
       <div class="set">{finishText}{toCardId(card)}</div>
       <div class="date">{dateFmt(card.released_at)}</div>
