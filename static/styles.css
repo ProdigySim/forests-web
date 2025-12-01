@@ -17,12 +17,28 @@
 }
 .print {
   text-align: center;
-  margin: 8px auto;
+  margin: 8px 0;
 }
 
-.print img {
+.print .front {
   width: 70%;
-  border-radius: 8px;
+  border-radius: 12px;
+  aspect-ratio: 2.5/3.5;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  position:relative;
+}
+
+.print .front.finish-foil:after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient( 45deg, red 5%, orange 10%, yellow 30%, green 50%, blue 70%, indigo 80%, violet 95% );
+  opacity: 0.3;
 }
 
 .controls {
