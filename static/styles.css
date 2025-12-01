@@ -2,6 +2,7 @@
   .print {
     border: 1px solid black;
   }
+
   .print.collected {
     background-color: rgba(30, 160, 10, 0.5);
   }
@@ -15,30 +16,90 @@
   margin: 0px auto;
   justify-content: center;
 }
+
 .print {
   text-align: center;
   margin: 8px 0;
+  position: relative;
+}
+
+
+@media screen {
+  .print.collected:after {
+    content: "✅";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+}
+
+
+:root {
+  --card-border-radius: 12px;
 }
 
 .print .front {
   width: 70%;
-  border-radius: 12px;
+  border-radius: var(--card-border-radius);
   aspect-ratio: 2.5/3.5;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0 auto;
-  position:relative;
+  position: relative;
 }
 
-.print .front.finish-foil:after {
-  content: "";
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background: linear-gradient( 45deg, red 5%, orange 10%, yellow 30%, green 50%, blue 70%, indigo 80%, violet 95% );
-  opacity: 0.3;
+@media screen {
+
+  .print .front.finish-foil:after,
+  .print .front.finish-etched:after {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 48px;
+    text-shadow: 3px 4px black;
+    padding: 4px 6px 0 0;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--card-border-radius);
+  }
+
+  .print .front.finish-foil:after {
+    content: "✨";
+
+    background: linear-gradient(45deg,
+        rgba(255, 0, 0, 0.3) 5%,
+        rgba(255, 255, 0, 0.3) 30%,
+        rgba(255, 165, 0, 0.3) 10%,
+        rgba(0, 128, 0, 0.3) 50%,
+        rgba(0, 0, 255, 0.3) 70%,
+        rgba(75, 0, 130, 0.3) 80%,
+        rgba(238, 130, 238, 0.3) 95%);
+  }
+  .print .front.finish-etched {
+    filter: saturate(0.5);
+  }
+  .print .front.finish-etched:after {
+    content: "🗿";
+    background-image: linear-gradient(45deg,
+        rgba(0, 0, 0, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.2) 75%,
+        transparent 75%,
+        transparent), linear-gradient(-45deg,
+        rgba(0, 0, 0, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.2) 75%,
+        transparent 75%,
+        transparent);
+    background-size: 4px 4px;
+  }
+
 }
 
 .controls {
@@ -71,18 +132,19 @@
   justify-content: center;
 }
 
-.clipboardbtns > span {
+.clipboardbtns>span {
   display: flex;
 }
 
-.clipboardbtns.visible > span {
+.clipboardbtns.visible>span {
   display: none;
 }
 
-.clipboardbtns > :not(span) {
+.clipboardbtns> :not(span) {
   display: none;
 }
-.clipboardbtns.visible > :not(span) {
+
+.clipboardbtns.visible> :not(span) {
   display: flex;
 }
 
@@ -113,6 +175,7 @@ button.activated {
 .scrollToTop button {
   border-radius: 50px;
 }
+
 .sitecontrols {
   position: absolute;
   top: 0;
@@ -126,6 +189,7 @@ button.activated {
     display: none;
   }
 }
+
 @media print {
   .sitecontrols {
     display: none;
@@ -135,25 +199,35 @@ button.activated {
     padding: 0 8px;
     break-inside: avoid;
   }
+
   .prints {
     grid-template-columns: 33% 33% 33%;
     width: 100%;
   }
+
   .print.collected {
     display: none;
   }
+
   .controls {
     display: none;
   }
+
+  .scrollToTop {
+    display: none !important;
+  }
 }
+
 @media screen {
   .darkmode {
     background-color: rgb(25, 25, 25);
     color: white;
   }
+
   .darkmode a {
     color: darkorange;
   }
+
   .darkmode a:visited {
     color: peru;
   }
@@ -161,6 +235,7 @@ button.activated {
   .darkmode .controls {
     border: 1px dotted white;
   }
+
   .darkmode button {
     border: 1px solid white;
   }
@@ -168,6 +243,7 @@ button.activated {
   .darkmode .print {
     border: 1px solid white;
   }
+
   .darkmode input {
     background-color: rgb(50, 50, 50);
     color: white;
