@@ -1,23 +1,23 @@
-import { ReadonlySignal, Signal } from "@preact/signals";
-import type { Card } from "scryfall-api";
+import { ReadonlySignal } from "@preact/signals";
 import { Print } from "./Print.tsx";
+import { useCollection } from "../contexts/Collection.ts";
 
 interface PrintListProps {
-  collection: Signal<Set<string>>;
   editMode: ReadonlySignal<boolean>;
-  prints: Array<{ card: Card; finish: string }>;
 }
 
-export function PrintList(props: PrintListProps) {
+export function PrintList({ editMode }: PrintListProps) {
+  const { visiblePrints, collection } = useCollection();
+
   return (
     <div class="prints">
-      {props.prints.map(({ card, finish }, i) => (
+      {visiblePrints.value.map(({ id, card, finish }) => (
         <Print
-          index={i}
+          index={id}
           card={card}
           finish={finish}
-          collection={props.collection}
-          isEditable={props.editMode}
+          collection={collection}
+          isEditable={editMode}
         />
       ))}
     </div>

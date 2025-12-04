@@ -1,23 +1,25 @@
 import { Signal, useSignal } from "@preact/signals";
-import { useRef } from 'preact/hooks';
+import { useRef } from "preact/hooks";
+import { Filters } from "../components/Filters.tsx";
+import { useCollection } from "../contexts/Collection.ts";
 
 export interface ControlsProps {
-  updateFromTimestamp: string;
-  collection: Signal<Set<string>>;
   editMode: Signal<boolean>;
-  totalPrints: number;
 }
 
 export function Controls(props: ControlsProps) {
-  const collected = props.collection.value.size;
-  const remaining = props.totalPrints - collected;
-  const total = props.totalPrints;
+  const { collection, filters, prints, updateFromTimestamp } = useCollection();
+  const totalPrints = prints.length;
+  const collected = collection.value.size;
+  const remaining = totalPrints - collected;
+  const total = totalPrints;
   const completionPct = (Math.round((collected / total) * 1000) / 10).toString(
     10,
   );
+  const showFilters = useSignal(false);
   const passwordInput = useRef<HTMLInputElement>(null);
   const statusText =
-    `${completionPct}% Complete!\nCollected: ${collected} Remaining: ${remaining} Total: ${props.totalPrints}`;
+    `${completionPct}% Complete!\nCollected: ${collected} Remaining: ${remaining} Total: ${total}`;
 
   const saveCollection = async () => {
     console.log("saving");
@@ -26,8 +28,8 @@ export function Controls(props: ControlsProps) {
       method: "PUT",
       body: JSON.stringify({
         passphrase,
-        updateFromTimestamp: props.updateFromTimestamp,
-        collection: Array.from(props.collection.value),
+        updateFromTimestamp: updateFromTimestamp,
+        collection: Array.from(collection.value),
       }),
     });
     if (res.ok) {
@@ -40,11 +42,13 @@ export function Controls(props: ControlsProps) {
   const clipboardLoad = async () => {
     try {
       const data = await navigator.clipboard.readText();
-      const collection = JSON.parse(data);
-      if (Array.isArray(collection) && typeof collection[0] === "string") {
+      const newCollection = JSON.parse(data);
+      if (
+        Array.isArray(newCollection) && typeof newCollection[0] === "string"
+      ) {
         // 6f1c8cb0-38eb-408b-94e8-16db83999b3b-foil
-        props.collection.value = new Set(
-          collection.filter((id) =>
+        collection.value = new Set(
+          newCollection.filter((id) =>
             /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-[a-z]+$/
               .test(id)
           ),
@@ -68,8 +72,17 @@ export function Controls(props: ControlsProps) {
           Check it out on Youtube.
         </a>
       </p>
-      <div class={props.editMode.value ? 'clipboardbtns visible' : 'clipboardbtns'}>
-        <span><a href="javascript:void(0)" onClick={() => props.editMode.value = true }>Edit Mode</a></span>
+      <div
+        class={props.editMode.value ? "clipboardbtns visible" : "clipboardbtns"}
+      >
+        <span>
+          <a
+            href="javascript:void(0)"
+            onClick={() => props.editMode.value = true}
+          >
+            Edit Mode
+          </a>
+        </span>
         <input
           ref={passwordInput}
           type="password"
@@ -83,6 +96,23 @@ export function Controls(props: ControlsProps) {
         </button>
       </div>
       <div class="status">{statusText}</div>
+      {showFilters.value
+        ? (
+          <>
+            <hr />
+            <Filters settings={filters} />
+          </>
+        )
+        : (
+          <p>
+            <a
+              href="javascript:void(0)"
+              onClick={() => showFilters.value = true}
+            >
+              Show Filters
+            </a>
+          </p>
+        )}
     </div>
   );
 }
