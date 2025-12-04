@@ -11,9 +11,9 @@ export function PrintList({ editMode }: PrintListProps) {
 
   return (
     <div class="prints">
-      {visiblePrints.value.map(({ card, finish }, i) => (
+      {visiblePrints.value.map(({ id, card, finish }) => (
         <Print
-          index={i}
+          index={id}
           card={card}
           finish={finish}
           collection={collection}

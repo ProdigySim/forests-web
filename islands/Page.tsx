@@ -10,7 +10,7 @@ import { CardCollectionDto } from "../db/index.ts";
 
 interface PageProps {
   collection: CardCollectionDto;
-  prints: Array<{ card: Card, finish: string }>;
+  prints: Array<{ id: number; card: Card, finish: string }>;
 }
 
 export function Page({collection: rawCollection, prints}: PageProps) {
@@ -25,15 +25,11 @@ export function Page({collection: rawCollection, prints}: PageProps) {
 
   return (
     <div>
-      <Collection.Provider value={{collection, filters, prints}}>
+      <Collection.Provider value={{collection, filters, prints, updateFromTimestamp: rawCollection.timestamp}}>
         <SiteControls />
         <ScrollToTop />
         <Controls
           editMode={editMode}
-          filters={filters}
-          totalPrints={prints.length}
-          updateFromTimestamp={rawCollection.timestamp}
-          collection={collection}
         />
         <PrintList editMode={editMode} />
       </Collection.Provider>

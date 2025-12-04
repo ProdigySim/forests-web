@@ -15,9 +15,10 @@ const parsedForests = (forests as unknown as Card[]).map(parseCard).sort(
   sortCards,
 );
 
-const flatForests = parsedForests.flatMap((card) =>
-  card.finishes.map((finish) => ({ finish, card }))
-);
+const flatForests = (() => {
+  let id = 0;
+  return parsedForests.flatMap((card) => card.finishes.map((finish) => ({ id: id++, finish, card })));
+})();
 export const handler = define.handlers({
   async GET(ctx) {
     return {
