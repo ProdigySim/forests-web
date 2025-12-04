@@ -10,10 +10,10 @@ import { CardCollectionDto } from "../db/index.ts";
 
 interface PageProps {
   collection: CardCollectionDto;
-  prints: Array<{ id: number; card: Card, finish: string }>;
+  prints: Array<{ id: number; card: Card; finish: string }>;
 }
 
-export function Page({collection: rawCollection, prints}: PageProps) {
+export function Page({ collection: rawCollection, prints }: PageProps) {
   const collection = useSignal(new Set<string>(rawCollection.collection));
   const editMode = useSignal(false);
   const filters = useSignal<FilterSettings>({
@@ -25,7 +25,14 @@ export function Page({collection: rawCollection, prints}: PageProps) {
 
   return (
     <div>
-      <Collection.Provider value={{collection, filters, prints, updateFromTimestamp: rawCollection.timestamp}}>
+      <Collection.Provider
+        value={{
+          collection,
+          filters,
+          prints,
+          updateFromTimestamp: rawCollection.timestamp,
+        }}
+      >
         <SiteControls />
         <ScrollToTop />
         <Controls

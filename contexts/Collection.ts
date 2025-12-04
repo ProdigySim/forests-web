@@ -1,9 +1,9 @@
-import { ReadonlySignal, signal, Signal, useComputed } from "@preact/signals";
+import { ReadonlySignal, Signal, signal, useComputed } from "@preact/signals";
 import { Card } from "scryfall-api";
 import { FilterSettings } from "../components/Filters.tsx";
 import { createContext } from "preact";
 import { useContext } from "preact/hooks";
-import { groupBy } from '@es-toolkit/es-toolkit';
+import { groupBy } from "@es-toolkit/es-toolkit";
 
 interface CardPrint {
   id: number;
@@ -22,7 +22,7 @@ export interface CollectionInfo extends CollectionCtx {
 }
 
 export const Collection = createContext<CollectionCtx>({
-  updateFromTimestamp: '',
+  updateFromTimestamp: "",
   collection: signal(new Set<string>()),
   prints: [],
   filters: signal({
@@ -34,24 +34,29 @@ export const Collection = createContext<CollectionCtx>({
 });
 
 export function useCollection(): CollectionInfo {
-  const { filters, collection, prints, updateFromTimestamp } = useContext(Collection);
-  
+  const { filters, collection, prints, updateFromTimestamp } = useContext(
+    Collection,
+  );
+
   const printsByFinish = useComputed(() => {
-    return groupBy(prints, ({finish}) => finish === 'nonfoil' ? 'nonfoil' : 'foil');
+    return groupBy(
+      prints,
+      ({ finish }) => finish === "nonfoil" ? "nonfoil" : "foil",
+    );
   });
   const visiblePrints = useComputed(() => {
     console.log("Updating prints");
-    if(Object.values(filters.value).every(x => !!x)) {
+    if (Object.values(filters.value).every((x) => !!x)) {
       return prints;
     }
     const fv = filters.value;
-    const collectionFilter = ({card, finish}: CardPrint) => {
-      if(collection.value.has(`${card.id}-${finish}`)) {
+    const collectionFilter = ({ card, finish }: CardPrint) => {
+      if (collection.value.has(`${card.id}-${finish}`)) {
         return filters.value.collected;
       }
       return filters.value.missing;
-    }
-    if(fv.foil && fv.nonfoil) {
+    };
+    if (fv.foil && fv.nonfoil) {
       return prints.filter(collectionFilter);
     } else if (fv.foil) {
       return printsByFinish.value.foil.filter(collectionFilter);

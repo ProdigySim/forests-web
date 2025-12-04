@@ -1,5 +1,5 @@
 import { Signal, useSignal } from "@preact/signals";
-import { useRef } from 'preact/hooks';
+import { useRef } from "preact/hooks";
 import { Filters } from "../components/Filters.tsx";
 import { useCollection } from "../contexts/Collection.ts";
 
@@ -8,7 +8,7 @@ export interface ControlsProps {
 }
 
 export function Controls(props: ControlsProps) {
-  const { collection, filters,prints, updateFromTimestamp  } = useCollection();
+  const { collection, filters, prints, updateFromTimestamp } = useCollection();
   const totalPrints = prints.length;
   const collected = collection.value.size;
   const remaining = totalPrints - collected;
@@ -43,7 +43,9 @@ export function Controls(props: ControlsProps) {
     try {
       const data = await navigator.clipboard.readText();
       const newCollection = JSON.parse(data);
-      if (Array.isArray(newCollection) && typeof newCollection[0] === "string") {
+      if (
+        Array.isArray(newCollection) && typeof newCollection[0] === "string"
+      ) {
         // 6f1c8cb0-38eb-408b-94e8-16db83999b3b-foil
         collection.value = new Set(
           newCollection.filter((id) =>
@@ -70,8 +72,17 @@ export function Controls(props: ControlsProps) {
           Check it out on Youtube.
         </a>
       </p>
-      <div class={props.editMode.value ? 'clipboardbtns visible' : 'clipboardbtns'}>
-        <span><a href="javascript:void(0)" onClick={() => props.editMode.value = true }>Edit Mode</a></span>
+      <div
+        class={props.editMode.value ? "clipboardbtns visible" : "clipboardbtns"}
+      >
+        <span>
+          <a
+            href="javascript:void(0)"
+            onClick={() => props.editMode.value = true}
+          >
+            Edit Mode
+          </a>
+        </span>
         <input
           ref={passwordInput}
           type="password"
@@ -85,11 +96,23 @@ export function Controls(props: ControlsProps) {
         </button>
       </div>
       <div class="status">{statusText}</div>
-      { showFilters.value ? <>
-      <hr />
-      <Filters settings={filters}/>
-      </> : <p><a href="javascript:void(0)" onClick={() => showFilters.value = true }>Show Filters</a></p>
-      }
+      {showFilters.value
+        ? (
+          <>
+            <hr />
+            <Filters settings={filters} />
+          </>
+        )
+        : (
+          <p>
+            <a
+              href="javascript:void(0)"
+              onClick={() => showFilters.value = true}
+            >
+              Show Filters
+            </a>
+          </p>
+        )}
     </div>
   );
 }

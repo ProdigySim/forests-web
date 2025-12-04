@@ -17,7 +17,9 @@ const parsedForests = (forests as unknown as Card[]).map(parseCard).sort(
 
 const flatForests = (() => {
   let id = 0;
-  return parsedForests.flatMap((card) => card.finishes.map((finish) => ({ id: id++, finish, card })));
+  return parsedForests.flatMap((card) =>
+    card.finishes.map((finish) => ({ id: id++, finish, card }))
+  );
 })();
 export const handler = define.handlers({
   async GET(ctx) {
@@ -30,5 +32,5 @@ export const handler = define.handlers({
   },
 });
 export default define.page<typeof handler>(function Home(ctx) {
-  return (<Page collection={ctx.data.collection} prints={ctx.data.prints} />);
+  return <Page collection={ctx.data.collection} prints={ctx.data.prints} />;
 });
