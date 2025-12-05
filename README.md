@@ -3,7 +3,11 @@
 This webpage tracks
 [PSim's Forest Collection Binder](https://youtu.be/Hj1ov-S0CNA).
 
-View the live page tracking the collection: https://forests.prodigysim.com/
+View the live page tracking the collection: https://forests.quest/
+
+## Feedback or issues
+
+Please report any issues or feedback on the [Issues page](https://github.com/ProdigySim/forests-web/issues).
 
 ## Info
 
