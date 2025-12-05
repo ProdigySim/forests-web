@@ -1,6 +1,7 @@
 import type { Card } from "scryfall-api";
-import { ReadonlySignal, Signal, useComputed } from "@preact/signals";
+import { ReadonlySignal, Signal } from "@preact/signals";
 import { useMemo } from "preact/hooks";
+import { toPrintId } from "../utils/cards.ts";
 
 type CardPlus = Card & { sld_drop_name?: string };
 
@@ -14,10 +15,6 @@ interface PrintProps {
 
 function dateFmt(released_at: Date) {
   return released_at.toISOString().split("T")[0];
-}
-function toCardId(c: Card) {
-  const collNumFixed = c.collector_number.replace("★", "");
-  return `${c.set.toUpperCase()} ${collNumFixed}`;
 }
 
 function shortenSetName(s: string) {
@@ -36,23 +33,9 @@ function shortenSetName(s: string) {
       "SpongeBob SquarePants: Lands Under the Sea",
       "SpongeBob SquarePants",
     )
-    .replace("KEXP: Where the Music Matters", "KEXP");
-}
-
-function foilText(card: Card, finish: string) {
-  const promoTypeFoils = card.promo_types?.find((x) =>
-    x.includes("foil")
-  ) as string;
-  switch (promoTypeFoils) {
-    case "surgefoil":
-      return "SURGE ";
-    case "galaxyfoil":
-      return "GALAXY ";
-    case "ripplefoil":
-      return "RIPPLE ";
-    default:
-      return finish === "nonfoil" ? "" : `${finish.toUpperCase()} `;
-  }
+    .replace("KEXP: Where the Music Matters", "KEXP")
+    .replace("Special Guest: Kozyndan: The Lands", "Special Guest: Kozyndan")
+    .replace("Marvel's Spider-Man: Mana Symbiote", "Spider-Man: Mana Symbiote");
 }
 
 export function Print(props: PrintProps) {
@@ -61,7 +44,6 @@ export function Print(props: PrintProps) {
   const image = card.image_uris
     ? card.image_uris.normal
     : card.card_faces?.[0]?.image_uris?.normal;
-  const finishText = foilText(card, finish);
 
   const collected = props.collection.value.has(`${card.id}-${finish}`);
   const toggle = () => {
@@ -95,7 +77,7 @@ export function Print(props: PrintProps) {
       <div class="num">{index.toString(10).padStart(4, "0")}</div>
       <div class={frontClasses} style={{ backgroundImage: `url(${image})` }} />
       <div class="name">{displaySetName}</div>
-      <div class="set">{finishText}{toCardId(card)}</div>
+      <div class="set">{toPrintId(card, finish)}</div>
       <div class="date">{dateFmt(card.released_at)}</div>
     </div>
   );

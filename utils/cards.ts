@@ -48,3 +48,26 @@ function parseGroupings(n: string) {
   }
   return parts;
 }
+
+export function toPrintId(c: Card, finish: string) {
+  return foilText(c, finish) + toCardId(c);
+}
+export function toCardId(c: Card) {
+  const collNumFixed = c.collector_number.replace("★", "");
+  return `${c.set.toUpperCase()} ${collNumFixed}`;
+}
+export function foilText(card: Card, finish: string) {
+  const promoTypeFoils = card.promo_types?.find((x) =>
+    x.includes("foil")
+  ) as string;
+  switch (promoTypeFoils) {
+    case "surgefoil":
+      return "SURGE ";
+    case "galaxyfoil":
+      return "GALAXY ";
+    case "ripplefoil":
+      return "RIPPLE ";
+    default:
+      return finish === "nonfoil" ? "" : `${finish.toUpperCase()} `;
+  }
+}

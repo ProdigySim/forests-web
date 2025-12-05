@@ -46,6 +46,11 @@
   position: relative;
 }
 
+.filtersearch input {
+  margin-top:4px;
+  width: 260px;
+}
+
 @media screen {
   .print .front.finish-foil:after,
   .print .front.finish-etched:after {

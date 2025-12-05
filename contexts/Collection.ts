@@ -4,6 +4,7 @@ import { FilterSettings } from "../components/Filters.tsx";
 import { createContext } from "preact";
 import { useContext } from "preact/hooks";
 import { groupBy } from "@es-toolkit/es-toolkit";
+import { toPrintId } from "../utils/cards.ts";
 
 interface CardPrint {
   id: number;
@@ -44,7 +45,7 @@ export function useCollection(): CollectionInfo {
       ({ finish }) => finish === "nonfoil" ? "nonfoil" : "foil",
     );
   });
-  const visiblePrints = useComputed(() => {
+  const toggleFiltered = useComputed(() => {
     console.log("Updating prints");
     if (Object.values(filters.value).every((x) => !!x)) {
       return prints;
@@ -63,6 +64,18 @@ export function useCollection(): CollectionInfo {
     } else if (fv.nonfoil) {
       return printsByFinish.value.nonfoil.filter(collectionFilter);
     } else return [];
+  });
+
+  const visiblePrints = useComputed(() => {
+    const searchText = filters.value.search.toLowerCase();
+    if(!searchText) {
+      return toggleFiltered.value;
+    }
+    return toggleFiltered.value.filter(p => {
+      return p.card.set_name.toLowerCase().includes(searchText)
+        || p.card.set.toLowerCase().includes(searchText)
+        || toPrintId(p.card, p.finish).toLowerCase().includes(searchText);
+    });
   });
   return {
     filters,

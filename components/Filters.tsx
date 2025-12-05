@@ -1,17 +1,26 @@
 import { Signal } from "@preact/signals";
 import { JSX } from "preact";
+import { useEffect, useState } from "preact/hooks";
 
 export interface FilterSettings {
   collected: boolean;
   missing: boolean;
   nonfoil: boolean;
   foil: boolean;
+  search: string;
 }
 
 export interface FiltersProps {
   settings: Signal<FilterSettings>;
 }
 export function Filters({ settings }: FiltersProps) {
+  const [searchValue, setSearchValue] = useState('');
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      settings.value = { ...settings.value, search: searchValue };
+    }, 300);
+    return () => clearTimeout(timeout);
+  }, [searchValue]);
   const handleChange = (e: JSX.TargetedInputEvent<HTMLInputElement>) => {
     const newSettings = { ...settings.value };
     const ct = e.currentTarget;
@@ -68,6 +77,15 @@ export function Filters({ settings }: FiltersProps) {
         >
         </input>
         <label for="filter-foil">Foil+</label>
+      </div>
+      <div class="filtersearch">
+        <input 
+          type="text" 
+          id="filter-search" 
+          placeholder='"Core Set", "249", "etched", ...'
+          value={searchValue} 
+          onInput={(e) => setSearchValue(e.currentTarget.value)}
+        ></input>
       </div>
     </div>
   );

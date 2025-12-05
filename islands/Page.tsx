@@ -21,6 +21,7 @@ export function Page({ collection: rawCollection, prints }: PageProps) {
     missing: true,
     nonfoil: true,
     foil: true,
+    search: '',
   });
 
   return (
