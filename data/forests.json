@@ -29037,12 +29037,12 @@
     "highres_image": true,
     "image_status": "highres_scan",
     "image_uris": {
-      "small": "https://cards.scryfall.io/small/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1759901318",
-      "normal": "https://cards.scryfall.io/normal/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1759901318",
-      "large": "https://cards.scryfall.io/large/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1759901318",
-      "png": "https://cards.scryfall.io/png/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.png?1759901318",
-      "art_crop": "https://cards.scryfall.io/art_crop/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1759901318",
-      "border_crop": "https://cards.scryfall.io/border_crop/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1759901318"
+      "small": "https://cards.scryfall.io/small/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1764629130",
+      "normal": "https://cards.scryfall.io/normal/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1764629130",
+      "large": "https://cards.scryfall.io/large/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1764629130",
+      "png": "https://cards.scryfall.io/png/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.png?1764629130",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1764629130",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/e/f/ef37620d-4fa4-4d2f-a668-7b1e556b3b04.jpg?1764629130"
     },
     "keywords": [],
     "games": [
@@ -39173,7 +39173,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Julien Nuijten"
   },
   {
     "object": "card",
@@ -39221,7 +39222,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Julien Nuijten"
   },
   {
     "object": "card",
@@ -39269,7 +39271,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Julien Nuijten"
   },
   {
     "object": "card",
@@ -39317,7 +39320,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Daniel Zink"
   },
   {
     "object": "card",
@@ -39365,7 +39369,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Dave Humpherys"
   },
   {
     "object": "card",
@@ -39413,7 +39418,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Daniel Zink"
   },
   {
     "object": "card",
@@ -39461,7 +39467,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Dave Humpherys"
   },
   {
     "object": "card",
@@ -39509,7 +39516,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Daniel Zink"
   },
   {
     "object": "card",
@@ -39557,7 +39565,8 @@
     "frame": "2003",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Dave Humpherys"
   },
   {
     "object": "card",
@@ -39605,7 +39614,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Kibler"
   },
   {
     "object": "card",
@@ -39653,7 +39663,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -39701,7 +39712,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -39749,7 +39761,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Kibler"
   },
   {
     "object": "card",
@@ -39797,7 +39810,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -39845,7 +39859,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -39893,7 +39908,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Kibler"
   },
   {
     "object": "card",
@@ -39941,7 +39957,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -39989,7 +40006,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -40037,7 +40055,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Kibler"
   },
   {
     "object": "card",
@@ -40085,7 +40104,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -40133,7 +40153,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -40181,7 +40202,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Kibler"
   },
   {
     "object": "card",
@@ -40229,7 +40251,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -40277,7 +40300,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -40325,7 +40349,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Kibler"
   },
   {
     "object": "card",
@@ -40373,7 +40398,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -40421,7 +40447,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -40469,7 +40496,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Kibler"
   },
   {
     "object": "card",
@@ -40517,7 +40545,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -40565,7 +40594,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -40613,7 +40643,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Raphael Levy"
   },
   {
     "object": "card",
@@ -40661,7 +40692,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Sim Han How"
   },
   {
     "object": "card",
@@ -40709,7 +40741,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Jan Tomcani"
   },
   {
     "object": "card",
@@ -40757,7 +40790,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Jan Tomcani"
   },
   {
     "object": "card",
@@ -40805,7 +40839,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Jan Tomcani"
   },
   {
     "object": "card",
@@ -40901,7 +40936,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Jan Tomcani"
   },
   {
     "object": "card",
@@ -40997,7 +41033,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Jan Tomcani"
   },
   {
     "object": "card",
@@ -41093,7 +41130,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Janosch Kühn"
   },
   {
     "object": "card",
@@ -41141,7 +41179,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Nicolas Labarre"
   },
   {
     "object": "card",
@@ -41285,7 +41324,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Matt Linde"
   },
   {
     "object": "card",
@@ -41333,7 +41373,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Selden"
   },
   {
     "object": "card",
@@ -41381,7 +41422,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Selden"
   },
   {
     "object": "card",
@@ -41429,7 +41471,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Selden"
   },
   {
     "object": "card",
@@ -41477,7 +41520,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Brian Selden"
   },
   {
     "object": "card",
@@ -41525,7 +41569,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Svend Geertsen"
   },
   {
     "object": "card",
@@ -41573,7 +41618,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Svend Geertsen"
   },
   {
     "object": "card",
@@ -41621,7 +41667,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Svend Geertsen"
   },
   {
     "object": "card",
@@ -41669,7 +41716,8 @@
     "frame": "1997",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Svend Geertsen"
   },
   {
     "object": "card",
@@ -41765,7 +41813,8 @@
     "frame": "1993",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Bertrand Lestree"
   },
   {
     "object": "card",
@@ -41813,7 +41862,8 @@
     "frame": "1993",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Preston Poulter"
   },
   {
     "object": "card",
@@ -41861,7 +41911,8 @@
     "frame": "1993",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Bertrand Lestree"
   },
   {
     "object": "card",
@@ -41909,7 +41960,8 @@
     "frame": "1993",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Preston Poulter"
   },
   {
     "object": "card",
@@ -41957,7 +42009,8 @@
     "frame": "1993",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Bertrand Lestree"
   },
   {
     "object": "card",
@@ -42005,7 +42058,8 @@
     "frame": "1993",
     "full_art": false,
     "booster": false,
-    "story_spotlight": false
+    "story_spotlight": false,
+    "signer": "Preston Poulter"
   },
   {
     "object": "card",

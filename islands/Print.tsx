@@ -3,7 +3,7 @@ import { ReadonlySignal, Signal } from "@preact/signals";
 import { useMemo } from "preact/hooks";
 import { toPrintId } from "../utils/cards.ts";
 
-type CardPlus = Card & { sld_drop_name?: string };
+type CardPlus = Card & { sld_drop_name?: string; signer?: string };
 
 interface PrintProps {
   index: number;
@@ -17,26 +17,35 @@ function dateFmt(released_at: Date) {
   return released_at.toISOString().split("T")[0];
 }
 
-function shortenSetName(s: string) {
-  return s
-    .replace("World Championship Decks", "World Champ. Deck")
-    .replace(
-      "Fourth Edition Foreign Black Border",
-      "4th Ed. Foreign Black Border",
-    )
-    .replace("The Lord of the Rings", "LotR")
-    .replace("Commander Legends:", "CL:")
-    .replace("Global Series", "G.S.")
-    .replace("Duel Decks:", "DD:")
-    .replace("Duel Decks Anthology:", "DDA:")
-    .replace(
-      "SpongeBob SquarePants: Lands Under the Sea",
-      "SpongeBob SquarePants",
-    )
-    .replace("KEXP: Where the Music Matters", "KEXP")
-    .replace("Special Guest: Kozyndan: The Lands", "Special Guest: Kozyndan")
-    .replace("Marvel's Spider-Man: Mana Symbiote", "Spider-Man: Mana Symbiote");
-}
+const shortenSetName = (() => {
+  const cache = new Map<string, string>();
+  return (s: string) => {
+    const candidate = cache.get(s);
+    if(candidate) return candidate;
+    
+    const shortened = s
+      .replace("World Championship Decks", "WCD")
+      .replace("Pro Tour Collector Set", "PTC")
+      .replace(
+        "Fourth Edition Foreign Black Border",
+        "4th Ed. Foreign Black Border",
+      )
+      .replace("The Lord of the Rings", "LotR")
+      .replace("Commander Legends:", "CL:")
+      .replace("Global Series", "G.S.")
+      .replace("Duel Decks:", "DD:")
+      .replace("Duel Decks Anthology:", "DDA:")
+      .replace(
+        "SpongeBob SquarePants: Lands Under the Sea",
+        "SpongeBob SquarePants",
+      )
+      .replace("KEXP: Where the Music Matters", "KEXP")
+      .replace("Special Guest: Kozyndan: The Lands", "Special Guest: Kozyndan")
+      .replace("Marvel's Spider-Man: Mana Symbiote", "Spider-Man: Mana Symbiote");
+    cache.set(s, shortened);
+    return shortened;
+  };
+})();
 
 export function Print(props: PrintProps) {
   const { index, card: origCard, finish } = props;
@@ -61,10 +70,10 @@ export function Print(props: PrintProps) {
 
   const setName = card.sld_drop_name
     ? `SLD: ${card.sld_drop_name}`
-    : card.set_name;
-  const displaySetName = useMemo(() => {
-    return shortenSetName(setName);
-  }, [setName]);
+    : card.signer 
+      ? card.set_name + ': ' + card.signer
+      : card.set_name;
+  const displaySetName = shortenSetName(setName);
   const frontClasses = `front finish-${props.finish}`;
   return (
     <div
