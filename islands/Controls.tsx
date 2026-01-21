@@ -63,9 +63,7 @@ export function Controls(props: ControlsProps) {
       <h1>
         <img class="forestlogo" src="favicon.png" />PSim's Forest Collection
       </h1>
-      <p class="subtitle">
-        <a href="https://forests.quest/">forests.quest</a> | <a target="_blank" href="https://github.com/ProdigySim/forests-web/issues">Feedback</a>
-      </p>
+      <p class="subtitle"><a target="_blank" href="mailto:mtgforestguy@gmail.com">mtgforestguy@gmail.com</a></p>
       <p>
         This page tracks the progress of the Every Forest in MTG Project. <br />
         <a href="https://www.youtube.com/watch?v=Hj1ov-S0CNA" target="_blank">
