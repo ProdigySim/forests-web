@@ -41,7 +41,8 @@ const shortenSetName = (() => {
       )
       .replace("KEXP: Where the Music Matters", "KEXP")
       .replace("Special Guest: Kozyndan: The Lands", "Special Guest: Kozyndan")
-      .replace("Marvel's Spider-Man: Mana Symbiote", "Spider-Man: Mana Symbiote");
+      .replace("Marvel's Spider-Man: Mana Symbiote", "Spider-Man: Mana Symbiote")
+      .replace("Dungeons & Dragons®: Lands of the Forgotten Realms", "D&D: Forgotten Realms");
     cache.set(s, shortened);
     return shortened;
   };
