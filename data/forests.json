@@ -1,6 +1,108 @@
 [
   {
     "object": "card",
+    "id": "f169dfb2-e4c8-46e9-8591-e51bb82da082",
+    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "name": "Forest",
+    "lang": "en",
+    "released_at": "2026-04-24T00:00:00.000Z",
+    "uri": "https://api.scryfall.com/cards/f169dfb2-e4c8-46e9-8591-e51bb82da082",
+    "scryfall_uri": "https://scryfall.com/card/sos/280/forest?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/1/f169dfb2-e4c8-46e9-8591-e51bb82da082.jpg?1775938964",
+      "normal": "https://cards.scryfall.io/normal/front/f/1/f169dfb2-e4c8-46e9-8591-e51bb82da082.jpg?1775938964",
+      "large": "https://cards.scryfall.io/large/front/f/1/f169dfb2-e4c8-46e9-8591-e51bb82da082.jpg?1775938964",
+      "png": "https://cards.scryfall.io/png/front/f/1/f169dfb2-e4c8-46e9-8591-e51bb82da082.png?1775938964",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/f/1/f169dfb2-e4c8-46e9-8591-e51bb82da082.jpg?1775938964",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/f/1/f169dfb2-e4c8-46e9-8591-e51bb82da082.jpg?1775938964"
+    },
+    "keywords": [],
+    "games": [
+      "paper",
+      "mtgo",
+      "arena"
+    ],
+    "finishes": [
+      "nonfoil",
+      "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set_id": "e487c9ce-5e76-4756-bcd0-e4b7db5c38a3",
+    "set": "sos",
+    "set_name": "Secrets of Strixhaven",
+    "set_type": "expansion",
+    "collector_number": "280",
+    "digital": false,
+    "artist": "Raph Lomotan",
+    "artist_ids": [
+      "7da5333c-6b1e-48ba-ab42-1b41f09920ee"
+    ],
+    "illustration_id": "a3a202c2-13bd-408f-bf62-22efad46cb40",
+    "border_color": "black",
+    "frame": "2015",
+    "full_art": false,
+    "booster": false,
+    "story_spotlight": false
+  },
+  {
+    "object": "card",
+    "id": "3041d539-4f15-4836-a215-afa19a5cc23f",
+    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "name": "Forest",
+    "lang": "en",
+    "released_at": "2026-04-24T00:00:00.000Z",
+    "uri": "https://api.scryfall.com/cards/3041d539-4f15-4836-a215-afa19a5cc23f",
+    "scryfall_uri": "https://scryfall.com/card/sos/281/forest?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/3/0/3041d539-4f15-4836-a215-afa19a5cc23f.jpg?1775938970",
+      "normal": "https://cards.scryfall.io/normal/front/3/0/3041d539-4f15-4836-a215-afa19a5cc23f.jpg?1775938970",
+      "large": "https://cards.scryfall.io/large/front/3/0/3041d539-4f15-4836-a215-afa19a5cc23f.jpg?1775938970",
+      "png": "https://cards.scryfall.io/png/front/3/0/3041d539-4f15-4836-a215-afa19a5cc23f.png?1775938970",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/3/0/3041d539-4f15-4836-a215-afa19a5cc23f.jpg?1775938970",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/3/0/3041d539-4f15-4836-a215-afa19a5cc23f.jpg?1775938970"
+    },
+    "keywords": [],
+    "games": [
+      "paper",
+      "mtgo",
+      "arena"
+    ],
+    "finishes": [
+      "nonfoil",
+      "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set_id": "e487c9ce-5e76-4756-bcd0-e4b7db5c38a3",
+    "set": "sos",
+    "set_name": "Secrets of Strixhaven",
+    "set_type": "expansion",
+    "collector_number": "281",
+    "digital": false,
+    "artist": "Andreas Zafiratos",
+    "artist_ids": [
+      "e2f13a9a-57c5-40de-81d4-3b0723899cdf"
+    ],
+    "illustration_id": "8413f801-8d13-4aad-9742-f1630af89807",
+    "border_color": "black",
+    "frame": "2015",
+    "full_art": false,
+    "booster": false,
+    "story_spotlight": false
+  },
+  {
+    "object": "card",
     "id": "3b84ec1e-ccce-4b8b-9302-b26f84cfa469",
     "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
     "name": "Forest",
@@ -565,6 +667,106 @@
     "frame": "2015",
     "full_art": false,
     "booster": true,
+    "story_spotlight": false
+  },
+  {
+    "object": "card",
+    "id": "a7cdabc9-39d6-4380-8e14-e7792d7463dd",
+    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "name": "Forest",
+    "lang": "en",
+    "released_at": "2025-01-24T00:00:00.000Z",
+    "uri": "https://api.scryfall.com/cards/a7cdabc9-39d6-4380-8e14-e7792d7463dd",
+    "scryfall_uri": "https://scryfall.com/card/inr/296/forest?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
+      "normal": "https://cards.scryfall.io/normal/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
+      "large": "https://cards.scryfall.io/large/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
+      "png": "https://cards.scryfall.io/png/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.png?1736551540",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540"
+    },
+    "keywords": [],
+    "games": [
+      "paper",
+      "mtgo"
+    ],
+    "finishes": [
+      "nonfoil",
+      "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set_id": "b9618c8c-9f31-4b42-9798-2991893c27bf",
+    "set": "inr",
+    "set_name": "Innistrad Remastered",
+    "set_type": "masters",
+    "collector_number": "296",
+    "digital": false,
+    "artist": "Jung Park",
+    "artist_ids": [
+      "269392ac-4c06-4650-98e2-d49a5a7f2371"
+    ],
+    "illustration_id": "4b299e6f-c680-4c22-9a16-5b0f9ec3e2f7",
+    "border_color": "black",
+    "frame": "1997",
+    "full_art": false,
+    "booster": false,
+    "story_spotlight": false
+  },
+  {
+    "object": "card",
+    "id": "7afdc917-ec37-4e03-853f-36cfe90053d9",
+    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "name": "Forest",
+    "lang": "en",
+    "released_at": "2025-01-24T00:00:00.000Z",
+    "uri": "https://api.scryfall.com/cards/7afdc917-ec37-4e03-853f-36cfe90053d9",
+    "scryfall_uri": "https://scryfall.com/card/inr/297/forest?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
+      "normal": "https://cards.scryfall.io/normal/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
+      "large": "https://cards.scryfall.io/large/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
+      "png": "https://cards.scryfall.io/png/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.png?1736551410",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410"
+    },
+    "keywords": [],
+    "games": [
+      "paper",
+      "mtgo"
+    ],
+    "finishes": [
+      "nonfoil",
+      "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set_id": "b9618c8c-9f31-4b42-9798-2991893c27bf",
+    "set": "inr",
+    "set_name": "Innistrad Remastered",
+    "set_type": "masters",
+    "collector_number": "297",
+    "digital": false,
+    "artist": "Eytan Zana",
+    "artist_ids": [
+      "0d8d6726-4051-445a-8374-a919aad98f38"
+    ],
+    "illustration_id": "4eab1d3a-370f-4611-84a8-83b422d772f9",
+    "border_color": "black",
+    "frame": "1997",
+    "full_art": false,
+    "booster": false,
     "story_spotlight": false
   },
   {
@@ -22548,47 +22750,49 @@
   },
   {
     "object": "card",
-    "id": "aea42376-97f6-4313-b139-7eeaf427b22b",
+    "id": "46196e8f-9339-4f00-b9cf-cab8f9abc80e",
     "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
     "name": "Forest",
     "lang": "en",
-    "released_at": "2026-05-01T00:00:00.000Z",
-    "uri": "https://api.scryfall.com/cards/aea42376-97f6-4313-b139-7eeaf427b22b",
-    "scryfall_uri": "https://scryfall.com/card/slp/35/forest?utm_source=api",
+    "released_at": "2026-04-24T00:00:00.000Z",
+    "uri": "https://api.scryfall.com/cards/46196e8f-9339-4f00-b9cf-cab8f9abc80e",
+    "scryfall_uri": "https://scryfall.com/card/sos/271/forest?utm_source=api",
     "layout": "normal",
     "highres_image": true,
     "image_status": "highres_scan",
     "image_uris": {
-      "small": "https://cards.scryfall.io/small/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1763997123",
-      "normal": "https://cards.scryfall.io/normal/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1763997123",
-      "large": "https://cards.scryfall.io/large/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1763997123",
-      "png": "https://cards.scryfall.io/png/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.png?1763997123",
-      "art_crop": "https://cards.scryfall.io/art_crop/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1763997123",
-      "border_crop": "https://cards.scryfall.io/border_crop/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1763997123"
+      "small": "https://cards.scryfall.io/small/front/4/6/46196e8f-9339-4f00-b9cf-cab8f9abc80e.jpg?1775938902",
+      "normal": "https://cards.scryfall.io/normal/front/4/6/46196e8f-9339-4f00-b9cf-cab8f9abc80e.jpg?1775938902",
+      "large": "https://cards.scryfall.io/large/front/4/6/46196e8f-9339-4f00-b9cf-cab8f9abc80e.jpg?1775938902",
+      "png": "https://cards.scryfall.io/png/front/4/6/46196e8f-9339-4f00-b9cf-cab8f9abc80e.png?1775938902",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/4/6/46196e8f-9339-4f00-b9cf-cab8f9abc80e.jpg?1775938902",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/4/6/46196e8f-9339-4f00-b9cf-cab8f9abc80e.jpg?1775938902"
     },
     "keywords": [],
     "games": [
-      "paper"
+      "paper",
+      "mtgo",
+      "arena"
     ],
     "finishes": [
       "nonfoil",
       "foil"
     ],
     "oversized": false,
-    "promo": true,
+    "promo": false,
     "reprint": true,
     "variation": false,
-    "set_id": "c325b3f9-51e1-416b-83b1-138f11790dd1",
-    "set": "slp",
-    "set_name": "Secret Lair Promo",
-    "set_type": "promo",
-    "collector_number": "35",
+    "set_id": "e487c9ce-5e76-4756-bcd0-e4b7db5c38a3",
+    "set": "sos",
+    "set_name": "Secrets of Strixhaven",
+    "set_type": "expansion",
+    "collector_number": "271",
     "digital": false,
-    "artist": "John Avon",
+    "artist": "Joshua Raphael",
     "artist_ids": [
-      "798f3932-30e0-4420-aa3f-db4d613f89ca"
+      "553b2a73-780f-414b-b2d7-3b7888821082"
     ],
-    "illustration_id": "07bad93b-3904-4700-8634-a11cfdb6ae69",
+    "illustration_id": "94b18948-8afa-466a-958f-53916f02aa47",
     "border_color": "black",
     "frame": "2015",
     "full_art": true,
@@ -23702,7 +23906,7 @@
     "artist_ids": [
       "bb677b1a-ce51-4888-83d6-5a94de461ff9"
     ],
-    "illustration_id": "1e2a3add-9ab5-4ef0-b719-269fa029b59d",
+    "illustration_id": "c3620454-bccf-4702-a700-51b2de280025",
     "border_color": "black",
     "frame": "2015",
     "full_art": false,
@@ -24182,12 +24386,12 @@
     "highres_image": true,
     "image_status": "highres_scan",
     "image_uris": {
-      "small": "https://cards.scryfall.io/small/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1738799053",
-      "normal": "https://cards.scryfall.io/normal/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1738799053",
-      "large": "https://cards.scryfall.io/large/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1738799053",
-      "png": "https://cards.scryfall.io/png/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.png?1738799053",
-      "art_crop": "https://cards.scryfall.io/art_crop/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1738799053",
-      "border_crop": "https://cards.scryfall.io/border_crop/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1738799053"
+      "small": "https://cards.scryfall.io/small/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1774839397",
+      "normal": "https://cards.scryfall.io/normal/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1774839397",
+      "large": "https://cards.scryfall.io/large/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1774839397",
+      "png": "https://cards.scryfall.io/png/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.png?1774839397",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1774839397",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/e/d/ed22c591-19f4-4096-a08c-5523a26b307c.jpg?1774839397"
     },
     "keywords": [],
     "games": [
@@ -24216,112 +24420,6 @@
     "full_art": true,
     "booster": false,
     "story_spotlight": false
-  },
-  {
-    "object": "card",
-    "id": "a7cdabc9-39d6-4380-8e14-e7792d7463dd",
-    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
-    "name": "Forest",
-    "lang": "en",
-    "released_at": "2025-01-24T00:00:00.000Z",
-    "uri": "https://api.scryfall.com/cards/a7cdabc9-39d6-4380-8e14-e7792d7463dd",
-    "scryfall_uri": "https://scryfall.com/card/inr/296/forest?utm_source=api",
-    "layout": "normal",
-    "highres_image": true,
-    "image_status": "highres_scan",
-    "image_uris": {
-      "small": "https://cards.scryfall.io/small/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
-      "normal": "https://cards.scryfall.io/normal/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
-      "large": "https://cards.scryfall.io/large/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
-      "png": "https://cards.scryfall.io/png/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.png?1736551540",
-      "art_crop": "https://cards.scryfall.io/art_crop/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540",
-      "border_crop": "https://cards.scryfall.io/border_crop/front/a/7/a7cdabc9-39d6-4380-8e14-e7792d7463dd.jpg?1736551540"
-    },
-    "keywords": [],
-    "games": [
-      "paper",
-      "mtgo"
-    ],
-    "finishes": [
-      "nonfoil",
-      "foil"
-    ],
-    "oversized": false,
-    "promo": false,
-    "reprint": true,
-    "variation": false,
-    "set_id": "b9618c8c-9f31-4b42-9798-2991893c27bf",
-    "set": "inr",
-    "set_name": "Innistrad Remastered",
-    "set_type": "masters",
-    "collector_number": "296",
-    "digital": false,
-    "artist": "Jung Park",
-    "artist_ids": [
-      "269392ac-4c06-4650-98e2-d49a5a7f2371"
-    ],
-    "illustration_id": "4b299e6f-c680-4c22-9a16-5b0f9ec3e2f7",
-    "border_color": "black",
-    "frame": "1997",
-    "full_art": false,
-    "booster": false,
-    "story_spotlight": false,
-    "promo_types": [
-      "boosterfun"
-    ]
-  },
-  {
-    "object": "card",
-    "id": "7afdc917-ec37-4e03-853f-36cfe90053d9",
-    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
-    "name": "Forest",
-    "lang": "en",
-    "released_at": "2025-01-24T00:00:00.000Z",
-    "uri": "https://api.scryfall.com/cards/7afdc917-ec37-4e03-853f-36cfe90053d9",
-    "scryfall_uri": "https://scryfall.com/card/inr/297/forest?utm_source=api",
-    "layout": "normal",
-    "highres_image": true,
-    "image_status": "highres_scan",
-    "image_uris": {
-      "small": "https://cards.scryfall.io/small/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
-      "normal": "https://cards.scryfall.io/normal/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
-      "large": "https://cards.scryfall.io/large/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
-      "png": "https://cards.scryfall.io/png/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.png?1736551410",
-      "art_crop": "https://cards.scryfall.io/art_crop/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410",
-      "border_crop": "https://cards.scryfall.io/border_crop/front/7/a/7afdc917-ec37-4e03-853f-36cfe90053d9.jpg?1736551410"
-    },
-    "keywords": [],
-    "games": [
-      "paper",
-      "mtgo"
-    ],
-    "finishes": [
-      "nonfoil",
-      "foil"
-    ],
-    "oversized": false,
-    "promo": false,
-    "reprint": true,
-    "variation": false,
-    "set_id": "b9618c8c-9f31-4b42-9798-2991893c27bf",
-    "set": "inr",
-    "set_name": "Innistrad Remastered",
-    "set_type": "masters",
-    "collector_number": "297",
-    "digital": false,
-    "artist": "Eytan Zana",
-    "artist_ids": [
-      "0d8d6726-4051-445a-8374-a919aad98f38"
-    ],
-    "illustration_id": "4eab1d3a-370f-4611-84a8-83b422d772f9",
-    "border_color": "black",
-    "frame": "1997",
-    "full_art": false,
-    "booster": false,
-    "story_spotlight": false,
-    "promo_types": [
-      "boosterfun"
-    ]
   },
   {
     "object": "card",
@@ -25822,12 +25920,12 @@
     "highres_image": true,
     "image_status": "highres_scan",
     "image_uris": {
-      "small": "https://cards.scryfall.io/small/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1709258718",
-      "normal": "https://cards.scryfall.io/normal/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1709258718",
-      "large": "https://cards.scryfall.io/large/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1709258718",
-      "png": "https://cards.scryfall.io/png/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.png?1709258718",
-      "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1709258718",
-      "border_crop": "https://cards.scryfall.io/border_crop/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1709258718"
+      "small": "https://cards.scryfall.io/small/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1774780516",
+      "normal": "https://cards.scryfall.io/normal/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1774780516",
+      "large": "https://cards.scryfall.io/large/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1774780516",
+      "png": "https://cards.scryfall.io/png/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.png?1774780516",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1774780516",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/7/9/79053ce4-62d4-416c-b001-93740521fd07.jpg?1774780516"
     },
     "keywords": [],
     "games": [
