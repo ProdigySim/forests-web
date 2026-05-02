@@ -22750,6 +22750,105 @@
   },
   {
     "object": "card",
+    "id": "aea42376-97f6-4313-b139-7eeaf427b22b",
+    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "name": "Forest",
+    "lang": "en",
+    "released_at": "2026-05-01T00:00:00.000Z",
+    "uri": "https://api.scryfall.com/cards/aea42376-97f6-4313-b139-7eeaf427b22b",
+    "scryfall_uri": "https://scryfall.com/card/slp/35/forest?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1774783221",
+      "normal": "https://cards.scryfall.io/normal/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1774783221",
+      "large": "https://cards.scryfall.io/large/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1774783221",
+      "png": "https://cards.scryfall.io/png/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.png?1774783221",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1774783221",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/a/e/aea42376-97f6-4313-b139-7eeaf427b22b.jpg?1774783221"
+    },
+    "keywords": [],
+    "games": [
+      "paper"
+    ],
+    "finishes": [
+      "nonfoil",
+      "foil"
+    ],
+    "oversized": false,
+    "promo": true,
+    "reprint": true,
+    "variation": false,
+    "set_id": "c325b3f9-51e1-416b-83b1-138f11790dd1",
+    "set": "slp",
+    "set_name": "Secret Lair Promo",
+    "set_type": "promo",
+    "collector_number": "35",
+    "digital": false,
+    "artist": "John Avon",
+    "artist_ids": [
+      "798f3932-30e0-4420-aa3f-db4d613f89ca"
+    ],
+    "illustration_id": "07bad93b-3904-4700-8634-a11cfdb6ae69",
+    "border_color": "black",
+    "frame": "2015",
+    "full_art": true,
+    "booster": false,
+    "story_spotlight": false
+  },
+  {
+    "object": "card",
+    "id": "bc9f3d1b-bb3a-4a78-9031-ed439212a48b",
+    "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "name": "Forest",
+    "lang": "en",
+    "released_at": "2026-04-27T00:00:00.000Z",
+    "uri": "https://api.scryfall.com/cards/bc9f3d1b-bb3a-4a78-9031-ed439212a48b",
+    "scryfall_uri": "https://scryfall.com/card/sld/2544/forest?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/b/c/bc9f3d1b-bb3a-4a78-9031-ed439212a48b.jpg?1776173691",
+      "normal": "https://cards.scryfall.io/normal/front/b/c/bc9f3d1b-bb3a-4a78-9031-ed439212a48b.jpg?1776173691",
+      "large": "https://cards.scryfall.io/large/front/b/c/bc9f3d1b-bb3a-4a78-9031-ed439212a48b.jpg?1776173691",
+      "png": "https://cards.scryfall.io/png/front/b/c/bc9f3d1b-bb3a-4a78-9031-ed439212a48b.png?1776173691",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/b/c/bc9f3d1b-bb3a-4a78-9031-ed439212a48b.jpg?1776173691",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/b/c/bc9f3d1b-bb3a-4a78-9031-ed439212a48b.jpg?1776173691"
+    },
+    "keywords": [],
+    "games": [
+      "paper"
+    ],
+    "finishes": [
+      "nonfoil",
+      "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set_id": "4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+    "set": "sld",
+    "set_name": "Secret Lair Drop",
+    "set_type": "box",
+    "collector_number": "2544",
+    "digital": false,
+    "artist": "David Frasheski",
+    "artist_ids": [
+      "7e60efde-8efc-4267-89b7-8060e911d7e5"
+    ],
+    "illustration_id": "0944cf28-fade-446b-ab01-f7497337b4e7",
+    "border_color": "borderless",
+    "frame": "2015",
+    "full_art": true,
+    "booster": false,
+    "story_spotlight": false,
+    "sld_drop_name": "My Little Pony: The Lands of Equestria"
+  },
+  {
+    "object": "card",
     "id": "46196e8f-9339-4f00-b9cf-cab8f9abc80e",
     "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
     "name": "Forest",
@@ -22898,7 +22997,7 @@
       "0c37cdfe-5651-4ae6-a3c8-e7153509f970"
     ],
     "illustration_id": "cd37bbee-fda6-4c75-ace3-df81cdb7b9c6",
-    "border_color": "borderless",
+    "border_color": "black",
     "frame": "2015",
     "full_art": true,
     "booster": false,
@@ -23606,12 +23705,12 @@
     "highres_image": true,
     "image_status": "highres_scan",
     "image_uris": {
-      "small": "https://cards.scryfall.io/small/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1761070003",
-      "normal": "https://cards.scryfall.io/normal/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1761070003",
-      "large": "https://cards.scryfall.io/large/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1761070003",
-      "png": "https://cards.scryfall.io/png/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.png?1761070003",
-      "art_crop": "https://cards.scryfall.io/art_crop/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1761070003",
-      "border_crop": "https://cards.scryfall.io/border_crop/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1761070003"
+      "small": "https://cards.scryfall.io/small/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1776822657",
+      "normal": "https://cards.scryfall.io/normal/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1776822657",
+      "large": "https://cards.scryfall.io/large/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1776822657",
+      "png": "https://cards.scryfall.io/png/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.png?1776822657",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1776822657",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/5/9/59f95235-3ca9-47d7-be6a-aebfb29fcbbd.jpg?1776822657"
     },
     "keywords": [],
     "games": [
